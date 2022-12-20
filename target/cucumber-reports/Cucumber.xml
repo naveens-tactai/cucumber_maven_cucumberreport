@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="0.253">
+    <testcase classname="Is it Friday yet?" name="Sunday isn't Friday" time="0.015">
+        <system-out>
+            <![CDATA[Given today is Sunday.......................................................passed
+When I ask whether it's Friday yet..........................................passed
+Then I should be told "Nope"................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Is it Friday yet?" name="Sunday isn't Monday" time="0.024">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError">
+            <![CDATA[Given today is Sunday.......................................................passed
+When I ask whether it's Friday yet..........................................passed
+When I ask whether it's Feb yet.............................................failed
+Then I should be told "Yes".................................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at stepdefinition.steps.i_ask_whether_it_s_feb_yet(steps.java:22)
+	at ✽.I ask whether it's Feb yet(file:///Users/naveensagayaselvaraj/IdeaProjects/cucumber_maven_cucumberreport/src/test/resources/features/is_it_friday_yet.feature:12)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Is it Friday yet?" name="Sunday isn't Tuesday" time="0.001">
+        <system-out>
+            <![CDATA[Given today is Sunday.......................................................passed
+When I ask whether it's Friday yet..........................................passed
+Then I should be told "nothing".............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Is it Friday yet?" name="Sunday isn't Tuesday 2" time="0.001">
+        <system-out>
+            <![CDATA[Given today is Sunday.......................................................passed
+When I ask whether it's Friday yet..........................................passed
+Then I should be told "yes guy".............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
